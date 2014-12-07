@@ -151,10 +151,6 @@ $(document).ready(function(){
         $cartDiv.html('<li>Your shopping cart is empty</li>')
         $cartDiv.listview('refresh');
     });
-
-    $('#takePicture').on('click', function(){
-        navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
-    })
 });
 
 //function removeProduct(targ){
