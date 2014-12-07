@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAkrF1MR6K8tH8SulLPxmtrk5DJuci1IaM"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/217-4.js"></script>
+    <title>Crust and Buns Mobile</title>
+</head>
+<body>
+
+<!-- Home Page -->
+<div data-role="page" id="home">
+    <div data-role="header">
+        <img src="img/pizzaLogo.png" alt="Crust and Buns Logo" />
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" class="ui-btn-active">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#aboutUs">About Us</a></li>
+                <li><a href="#callUs">Call Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <img src="img/pizza_home.jpg" alt="Pizza Home" />
+        <div>
+            Welcome to Crust and Buns Pizza! No matter what kind of pizza you're in the mood for, we have what you
+            need! Check out Menu page to browse our selection and head over to our order page when you have made up
+            your mind.<br /><br />
+            <div>
+                <div>
+                    Crust and Buns<br />
+                    333425 Hwy 2<br />
+                    Newport, WA<br /><br />
+
+                    Hours:<br />
+                    9am-9pm Sun-Thu<br />
+                    9am-11pm Fri-Sat<br /><br />
+                    Phone: 1-800-555-555
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <p>Copyright Devin Delp &copy; 2014</p>
+    </div>
+</div>
+
+<!-- Menu Page -->
+<div data-role="page" id="menu">
+    <div data-role="header">
+        <img src="img/pizzaLogo.png" alt="Crust and Buns Logo" />
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu" class="ui-btn-active ui-state-persist">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#aboutUs">About Us</a></li>
+                <li><a href="#callUs">Call Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="content" class="ui-content">
+
+        <h3>Selection of Toppings</h3>
+
+        <div>
+
+            <h2>Pizza Toppings</h2>
+            <div data-product="Canadian Bacon">
+                <p data-price="4"><strong class="price">$4.00</strong></p>
+                <img src="img/canadian.jpg" alt="Canadian Bacon" /><br />
+                Try our fresh Canadian Bacon topping.
+                <button class="ui-btn-inline cart">Add to Cart</button>
+            </div>
+
+            <div data-product="Pepperoni">
+                <p data-price="4"><strong class="price">$4.00</strong></p>
+                <img src="img/pepperoni.jpg" alt="Pepperoni" /><br />
+                Try our fresh cut Pepperoni topping.
+                <button class="ui-btn-inline cart">Add to Cart</button>
+            </div>
+
+            <div data-product="Sausage">
+                <p data-price="4"><strong class="price">$4.00</strong></p>
+                <img src="img/sausage.jpg" alt="Sausage" /><br />
+                Try our delicious Sausage topping.
+                <button class="ui-btn-inline cart">Add to Cart</button>
+            </div>
+
+            <div data-product="Black Olives">
+                <p data-price="2"><strong class="price">$2.00</strong></p>
+                <img src="img/olives.jpg" alt="Black Olives" /><br />
+                Try our garden fresh black olive topping.
+                <button class="ui-btn-inline cart">Add to Cart</button>
+            </div>
+
+            <div data-product="Green Peppers">
+                <p data-price="2"><strong class="price">$2.00</strong></p>
+                <img src="img/greenPeppers.jpg" alt="Green Peppers" /><br />
+                Try our healthy green pepper topping.
+                <button class="ui-btn-inline cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <h3>Selection of Pizza Crusts</h3>
+
+        <div data-product="Plain Crust">
+            <p data-price="10"><strong class="price">$10.00</strong></p>
+            <img src="img/plain.jpg" alt="Plain Crust" /><br />
+            Try our delicious old-fashioned plain crust.
+            <button class="ui-btn-inline cart">Add to Cart</button>
+        </div>
+
+        <div data-product="Hand Pressed Crust">
+            <p data-price="12"><strong class="price">$12.00</strong></p>
+            <img src="img/handPressed.jpg" alt="Hand Pressed Crust" /><br />
+            Try our custom hand pressed crust.
+            <button class="ui-btn-inline cart">Add to Cart</button>
+        </div>
+
+        <div data-product="Focaccia Crust">
+            <p data-price="14"><strong class="price">$14.00</strong></p>
+            <img src="img/focacia.jpg" alt="Focaccia Crust" /><br />
+            Like more flavor in your pizza? Try our delicate Focaccia crust
+            <button class="ui-btn-inline cart">Add to Cart</button>
+        </div>
+
+        <div data-product="Taco Crust">
+            <p data-price="11"><strong class="price">$11.00</strong></p>
+            <img src="img/taco.jpg" alt="Taco Crust" /><br />
+            Try our delicious mexican style Taco Crust
+            <button class="ui-btn-inline cart">Add to Cart</button>
+        </div>
+
+        <div data-product="Wheat Crust">
+            <p data-price="12"><strong class="price">$12.00</strong></p>
+            <img src="img/wheat.jpg" alt="Wheat Crust" /><br />
+            Try our healthy wheat Crust.
+            <button class="ui-btn-inline cart">Add to Cart</button>
+        </div>
+
+        <div data-product="Pepsi">
+            <p data-price="2"><strong class="price">$2.00</strong></p>
+            <img src="img/pepsi.jpg" alt="Pepsi" /><br />
+            Pepsi soda
+            <button class="ui-btn-inline cart">Add to Cart</button>
+        </div>
+
+        <div data-product="Coca Cola">
+            <p data-price="2"><strong class="price">$2.00</strong></p>
+            <img src="img/coke.jpg" alt="Coca Cola" /><br />
+            Coca Cola soda
+            <button class="ui-btn-inline cart">Add to Cart</button>
+        </div>
+
+        <div data-product="Dr. Pepper">
+            <p data-price="2"><strong class="price">$2.00</strong></p>
+            <img src="img/drPepper.jpg" alt="Dr. Pepper" /><br />
+            Dr. Pepper soda
+            <button class="ui-btn-inline cart">Add to Cart</button>
+        </div>
+
+        <div data-product="Sierra Mist">
+            <p data-price="2"><strong class="price">$2.00</strong></p>
+            <img src="img/sierraMist.jpg" alt="Sierra Mist" /><br />
+            Sierra Mist soda
+            <button class="ui-btn-inline cart">Add to Cart</button>
+        </div>
+
+        <div data-product="Root Beer">
+            <p data-price="2"><strong class="price">$2.00</strong></p>
+            <img src="img/rootBeer.png" alt="Root Beer" /><br />
+            Root Beer soda
+            <button class="ui-btn-inline cart">Add to Cart</button>
+        </div>
+
+        <div data-product="Mountain Dew">
+            <p data-price="2"><strong class="price">$2.00</strong></p>
+            <img src="img/mountainDew.jpg" alt="Mountain Dew" /><br />
+            Mountain Dew Soda
+            <button class="ui-btn-inline cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <p>Copyright Devin Delp &copy; 2014</p>
+    </div>
+</div>
+
+<div data-role="page" id="order">
+    <div data-role="header">
+        <img src="img/pizzaLogo.png" alt="Crust and Buns Logo" />
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order" class="ui-btn-active ui-state-persist">Order</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#aboutUs">About Us</a></li>
+                <li><a href="#callUs">Call Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="main" class="ui-content">
+
+        <div>
+            <button id="saveFavorite">Save Favorite Order</button>
+            <button id="loadFavorite">Load Favorite Order</button>
+        </div>
+
+        <ul id="cartDiv" data-role="listview" data-inset="true">
+            <li>Your shopping Cart is Empty</li>
+        </ul>
+
+        <button id="clear">Clear Cart</button>
+        <div>
+            <button id="buyNow">Checkout</button>
+        </div>
+
+        <div>
+            <ul data-role="listview" data-split-icon="plus" data-inset="true">
+                <li class='product' data-product="Canadian Bacon">
+                    <a href="#"><img src="img/canadian_sm.jpg" alt="Canadian Bacon"/>
+                        <h2>Canadian Bacon topping</h2>
+                        <p data-price="4">$4.00</p>
+                    </a>
+                    <a href="#" class="cart">Add to Cart</a>
+                </li>
+
+                <li class='product' data-product="Pepperoni">
+                    <a href="#"><img src="img/pepperoni_sm.jpg" alt="Pepperoni" />
+                        <h2>Pepperoni topping</h2>
+                        <p data-price="4">$4.00</p>
+                    </a>
+                    <a href="#" class="cart">Add to Cart</a>
+                </li>
+
+                <li class='product' data-product="Sausage">
+                    <a href="#">
+                        <img src="img/sausage_sm.jpg" alt="Sausage" />
+                        <h2>Sausage topping</h2>
+                        <p data-price="4">$4.00</p>
+                    </a>
+                    <a href="#" class="cart">Add to Cart</a>
+                </li>
+
+                <li class='product' data-product="Black Olives">
+                    <a href="#">
+                        <img src="img/olives_sm.jpg" alt="Black Olives" />
+                        <h2>Black Olive topping</h2>
+                        <p data-price="2">$2.00</p>
+                    </a>
+                    <a href="#" class="cart">Add to Cart</a>
+                </li>
+
+                <li class='product' data-product="Green Peppers">
+                    <a href="#">
+                        <img src="img/greenPeppers_sm.jpg" alt="Green Peppers" />
+                        <h2>Green Peppers</h2>
+                        <p data-price="2">$2.00</p>
+                    </a>
+                    <a href="#" class="cart">Add to Cart</a>
+                </li>
+
+                <li data-role="list-divider">Pizza Crusts</li>
+
+                <li class="product" data-product="Plain Crust">
+                    <a href="#">
+                        <img src="img/plain_sm.jpg" alt="Plain Crust" />
+                        <h2>Plain Crust</h2>
+                        <p data-price="10">$10.00</p>
+                    </a>
+                    <a href="#" class="cart">Add to Cart</a>
+                </li>
+
+                <li class="product" data-product="Hand Pressed Crust">
+                    <a href="#">
+                        <img src="img/handPressed_sm.jpg" alt="Hand Pressed Crust" />
+                        <h2>Hand Pressed Crust</h2>
+                        <p data-price="12">$12.00</p>
+                    </a>
+                    <a href="#" class="cart">Add to Cart</a>
+                </li>
+
+                <li class="product" data-product="Focaccia Crust">
+                    <a href="#">
+                        <img src="img/focacia_sm.jpg" alt="Focaccia Crust" />
+                        <h2>Fococcia Crust</h2>
+                        <p data-price="14">$14.00</p>
+                    </a>
+                    <a href="#" class="cart">Add to Cart</a>
+                </li>
+
+                <li class="product" data-product="Taco Crust">
+                    <a href="#">
+                        <img src="img/taco_sm.jpg" alt="Taco Crust" />
+                        <h2>Taco Crust</h2>
+                        <p data-price="11">$11.00</p>
+                    </a>
+                    <a href="#" class="cart">Add to Cart</a>
+                </li>
+
+                <li class="product" data-product="Wheat Crust">
+                    <a href="#">
+                        <img src="img/wheat_sm.jpg" alt="Wheat Crust" />
+                        <h2>Wheat Crust</h2>
+                        <p data-price="12">$12.00</p>
+                    </a>
+                    <a href="#" class="cart">Add to Cart</a>
+                </li>
+
+                <li data-role="list-divider">Cold Drinks</li>
+
+                <li class="product" data-product="Pepsi">
+                    <a href="#">
+                        <img src="img/pepsi_sm.jpg" alt="Pepsi" />
+                        <h2>Pepsi</h2>
+                        <p data-price="2">$2.00</p>
+                    </a>
+                    <a href="#" class="cart">Add to Cart</a>
+                </li>
+
+                <li class="product" data-product="Coca Cola">
+                    <a href="#">
+                        <img src="img/coke_sm.jpg" alt="Coca Cola" />
+                        <h2>Coca Cola</h2>
+                        <p data-price="2">$2.00</p>
+                    </a>
+                    <a href="#" class="cart">Add to Cart</a>
+                </li>
+
+                <li class="product" data-product="Dr. Pepper">
+                    <a href="#">
+                        <img src="img/drPepper_sm.jpg" alt="Dr. Pepper" />
+                        <h2>Dr. Pepper</h2>
+                        <p data-price="2">$2.00</p>
+                    </a>
+                    <a href="#" class="cart">Add to Cart</a>
+                </li>
+
+                <li class="product" data-product="Sierra Mist">
+                    <a href="#">
+                        <img src="img/sierraMist_sm.jpg" alt="Sierra Mist" />
+                        <h2>Sierra Mist</h2>
+                        <p data-price="2">$2.00</p>
+                    </a>
+                    <a href="#" class="cart">Add to Cart</a>
+                </li>
+
+                <li class="product" data-product="Root Beer">
+                    <a href="#">
+                        <img src="img/rootBeer_sm.jpg" alt="Root Beer" />
+                        <h2>Root Beer</h2>
+                        <p data-price="2">$2.00</p>
+                    </a>
+                    <a href="#" class="cart">Add to Cart</a>
+                </li>
+
+                <li class="product" data-product="Mountain Dew">
+                    <a href="#">
+                        <img src="img/mountainDew_sm.jpg" alt="Mountain Dew" />
+                        <h2>Mountain Dew</h2>
+                        <p data-price="2">$2.00</p>
+                    </a>
+                    <a href="#" class="cart">Add to Cart</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div data-role="footer" data-position="fixed">
+        <p>Copyright Devin Delp &copy; 2014</p>
+    </div>
+</div>
+
+
+<!-- Order Page -->
+<div data-role="page" id="location">
+    <div data-role="header">
+        <img src="img/pizzaLogo.png" alt="Crust and Buns Logo" />
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#location" class="ui-btn-active ui-state-persist">Location</a></li>
+                <li><a href="#aboutUs">About Us</a></li>
+                <li><a href="#callUs">Call Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="map" data-role="main" class="ui-content">
+
+    </div>
+
+    <div id="directions">
+
+    </div>
+
+
+    <div data-role="footer" data-position="fixed">
+        <p>Copyright Devin Delp &copy; 2014</p>
+    </div>
+</div>
+
+<div data-role="page" id="aboutUs">
+    <div data-role="header">
+        <img src="img/pizzaLogo.png" alt="Crust and Buns Logo" />
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#aboutUs" class="ui-btn-active ui-state-persist">About Us</a></li>
+                <li><a href="#callUs">Call Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="about" data-rol="main" class="ui-content">
+        <div>
+            <div>
+                <img class="img-responsive img-rounded" src="img/pizza_building.jpg" alt="Pizza Building" />
+            </div>
+
+            <div>
+                Crust and Buns<br />
+                333425 Hwy 2<br />
+                Newport, WA<br /><br />
+
+                Hours:<br />
+                9am-9pm Sun-Thu<br />
+                9am-11pm Fri-Sat<br />
+                Phone: 1-800-555-555
+            </div>
+        </div>
+
+        <div>
+            <h3 class="text-center">Get Directions to our restaurant <a href="#location">Here</a></h3>
+        </div>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <p>Copyright Devin Delp &copy; 2014</p>
+    </div>
+</div>
+
+<div data-role="page" id="callUs">
+    <div data-role="header">
+        <img src="img/pizzaLogo.png" alt="Crust and Buns Logo" />
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#aboutUs">About Us</a></li>
+                <li><a href="#callUs" class="ui-btn-active ui-state-persist">Call Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="call" data-rol="main" class="ui-content">
+        <a href="tel:15555555555" data-role="button">Call us to order now!</a>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <p>Copyright Devin Delp &copy; 2014</p>
+    </div>
+</div>
+
+</body>
+</html>
