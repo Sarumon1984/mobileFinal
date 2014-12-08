@@ -523,6 +523,8 @@
 
         function onPhotoDataSuccess(imageData){
             var capturedPicture = document.getElementById('capturedPicture');
+            capturedPicture.style.width = imageData.width;
+            capturedPicture.style.height = imageData.height;
             capturedPicture.style.display = 'block';
             capturedPicture.src = "data:image/jpeg;base64," + imageData;
         }
