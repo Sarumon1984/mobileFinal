@@ -554,6 +554,11 @@
             var capturedPicture = document.getElementById('capturedPicture');
             capturedPicture.style.display = 'block';
             capturedPicture.src = imageURI;
+            alert(imageURI);
+        }
+
+        function nextPhoto(){
+
         }
     </script>
 
@@ -562,7 +567,7 @@
         <button onclick="clearPicture();">Clear Picture</button><br />
         <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">Save picture you take</button><br />
         <img id="capturedPicture" src="" alt="Your captured picture will go here" />
-
+        <button onclick="nextPhoto();">Next Photo in album</button>
     </div>
 
     <div data-role="footer" data-position="fixed">
