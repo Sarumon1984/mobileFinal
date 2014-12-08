@@ -540,12 +540,21 @@
         function clearPicture(){
             document.getElementById('capturedPicture').src = '';
         }
+        function savePicture(imageData){
+            navigator.camera.getPicture(onPhotoDataSuccess, onFail,{
+                quality: 100,
+                allowEdit: true,
+                saveToPhotoAlbum: true,
+                destinationType: destinationType.DATA_URL });
+        }
     </script>
 
     <div id="cameraFunctions" data-role="main">
         <button onclick="takePicture();">Snap a picture</button><br />
         <button onclick="clearPicture();">Clear Picture</button><br />
+        <button onclick="savePicture();">Save picture you take</button><br />
         <img id="capturedPicture" src="" alt="Your captured picture will go here" />
+
     </div>
 
     <div data-role="footer" data-position="fixed">
