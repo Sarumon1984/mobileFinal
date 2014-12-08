@@ -557,7 +557,7 @@
 
         function nextPhoto(){
             var currentPicture = document.getElementById('capturedPicture');
-            alert(parseInt(currentPicture.src))
+            currentPicture.src = pictureSource.SAVEDPHOTOALBUM.nextSibling;
         }
     </script>
 
