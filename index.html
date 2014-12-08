@@ -524,7 +524,7 @@
 
         function onPhotoDataSuccess(imageData) {
 
-            var smallImage = document.getElementById('smallImage');
+            var capturedPicture = document.getElementById('capturedPicture');
 
             smallImage.style.display = 'block';
 
@@ -543,6 +543,7 @@
 
     <div data-role="main">
         <button onclick="takePicture();">Snap a picture</button><br />
+        <img id="capturedPicture" src="" />
     </div>
 
     <div data-role="footer" data-position="fixed">
