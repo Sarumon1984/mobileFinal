@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
     <link rel="stylesheet" href="css/custom.css" />
     <script type="text/javascript" src="js/cordova.js"></script>
-    <script type="text/javascript" src="js/mobileFuncs.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAkrF1MR6K8tH8SulLPxmtrk5DJuci1IaM"></script>
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
@@ -510,18 +509,26 @@
         </div>
     </div>
 
+    <script>
 
+        var pictureSource;   // picture source
+        var destinationType;
+
+        function onDeviceReady() {
+            pictureSource=navigator.camera.PictureSourceType;
+            destinationType=navigator.camera.DestinationType;
+        }
+
+        function takePicture() {
+            navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+                destinationType: destinationType.DATA_URL });
+        }
+
+    </script>
 
     <div data-role="main">
-        <button onclick="capturePhoto();">Capture Photo</button> <br>
-        <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
-        <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
-        <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
-        <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
-        <img style="display:none;" id="largeImage" src="" />
+        <button onclick="takePicture();">Snap a picture</button><br />
     </div>
-
-
 
     <div data-role="footer" data-position="fixed">
         <p>Copyright Devin Delp &copy; 2014</p>
