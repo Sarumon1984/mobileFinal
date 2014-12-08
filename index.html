@@ -510,7 +510,7 @@
     </div>
 
     <script>
-        var pictureSource;   // picture source
+        var pictureSource;
         var destinationType;
 
         document.addEventListener("deviceready",onDeviceReady,false);
@@ -555,18 +555,14 @@
             capturedPicture.src = imageURI;
         }
 
-        function nextPhoto(){
-            var currentPicture = document.getElementById('capturedPicture');
-            currentPicture.src = pictureSource.SAVEDPHOTOALBUM.next;
-        }
+
     </script>
 
     <div id="cameraFunctions" data-role="main">
         <button onclick="takePicture();">Snap a picture</button><br />
         <button onclick="clearPicture();">Clear Picture</button><br />
-        <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">Save picture you take</button><br />
+        <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">Load a saved Image</button><br />
         <img id="capturedPicture" src="" alt="Your captured picture will go here" />
-        <button onclick="nextPhoto();">Next Photo in album</button>
     </div>
 
     <div data-role="footer" data-position="fixed">
