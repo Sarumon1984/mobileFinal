@@ -531,8 +531,8 @@
         function takePicture(){
             navigator.camera.getPicture(onPhotoDataSuccess, onFail,{
                 quality: 100,
-                targetWidth: 100,
-                targetHeight: 100,
+                targetWidth: 300,
+                targetHeight: 300,
                 destinationType: destinationType.DATA_URL });
         }
         function onFail(message){
@@ -540,11 +540,10 @@
         }
         function clearPicture(){
             document.getElementById('capturedPicture').src = '';
-            alert('Picture is cleared');
         }
     </script>
 
-    <div data-role="main">
+    <div id="cameraFunctions" data-role="main">
         <button onclick="takePicture();">Snap a picture</button><br />
         <button onclick="clearPicture();">Clear Picture</button><br />
         <img id="capturedPicture" src="" alt="Your captured picture will go here" />

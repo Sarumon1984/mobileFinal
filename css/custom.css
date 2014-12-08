@@ -23,3 +23,7 @@ div{
     font-size: 1.5em;
     font-style: italic;
 }
+
+#capturedPicture, #cameraFunctions{
+    text-align: center;
+}
