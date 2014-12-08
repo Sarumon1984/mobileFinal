@@ -540,11 +540,12 @@
         function clearPicture(){
             document.getElementById('capturedPicture').src = '';
         }
-        function savePicture(imageData){
+        function savePicture(){
             navigator.camera.getPicture(onPhotoDataSuccess, onFail,{
                 quality: 100,
                 allowEdit: true,
                 saveToPhotoAlbum: true,
+                cameraDirection: 1,
                 destinationType: destinationType.DATA_URL });
         }
     </script>
