@@ -510,7 +510,6 @@
     </div>
 
     <script>
-
         var pictureSource;   // picture source
         var destinationType;
 
@@ -530,7 +529,10 @@
         }
 
         function takePicture(){
-            navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+            navigator.camera.getPicture(onPhotoDataSuccess, onFail,{
+                quality: 100,
+                targetWidth: 100,
+                targetHeight: 100,
                 destinationType: destinationType.DATA_URL });
         }
         function onFail(message){
@@ -538,8 +540,8 @@
         }
         function clearPicture(){
             document.getElementById('capturedPicture').src = '';
+            alert('Picture is cleared');
         }
-
     </script>
 
     <div data-role="main">
