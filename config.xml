@@ -26,7 +26,7 @@
     <preference name="permissions"                value="none"/>
 
     <!-- Customize your app and platform with the preference element. -->
-    <preference name="phonegap-version"           value="3.5.0" />          <!-- all: current version of PhoneGap -->
+    <preference name="phonegap-version"           value="3.6.3" />          <!-- all: current version of PhoneGap -->
 
                         <!-- myChanges - changed value="default" to value="portrait" -->
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
@@ -107,8 +107,8 @@
 
                         <!-- myChanges - Added Following lines x3 -->
     <icon src="res/icon/ios/icon-76.png"            gap:platform="ios"        width="76" height="76" />
-    <icon src="res/icon/ios/icon-120.png" gap:platform="ios" width="120" height="120" />
-    <icon src="res/icon/ios/icon-152.png" gap:platform="ios" width="152" height="152" />
+    <icon src="res/icon/ios/icon-120.png"           gap:platform="ios"        width="120" height="120" />
+    <icon src="res/icon/ios/icon-152.png"           gap:platform="ios"        width="152" height="152" />
 
     <icon src="res/icon/webos/icon-64.png"          gap:platform="webos" />
     <icon src="res/icon/windows-phone/icon-48.png"  gap:platform="winphone" />
