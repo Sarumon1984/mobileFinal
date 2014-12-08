@@ -518,6 +518,7 @@
         function onDeviceReady(){
             pictureSource=navigator.camera.PictureSourceType;
             destinationType=navigator.camera.DestinationType;
+            Camera.mediaType = Camera.MediaType.VIDEO;
         }
 
         function onPhotoDataSuccess(imageData){
@@ -531,7 +532,6 @@
         function takePicture(){
             navigator.camera.getPicture(onPhotoDataSuccess, onFail,{
                 quality: 100,
-                allowEdit: true,
                 destinationType: destinationType.DATA_URL });
         }
         function onFail(message){
@@ -540,15 +540,8 @@
         function clearPicture(){
             document.getElementById('capturedPicture').src = '';
         }
-        function savePicture(){
-            Camera.direction = { BACK: 0,
-                                 FRONT: 1}
-            navigator.camera.getPicture(onPhotoDataSuccess, onFail,{
-                quality: 100,
-                allowEdit: true,
-                saveToPhotoAlbum: true,
-                cameraDirection: 1,
-                destinationType: destinationType.DATA_URL });
+        function loadPicture(){
+
         }
     </script>
 
