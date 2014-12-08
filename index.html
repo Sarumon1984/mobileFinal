@@ -556,9 +556,9 @@
             capturedPicture.src = imageURI;
         }
 
-        function nextPhoto(imageURI){
+        function nextPhoto(){
             var currentPicture = document.getElementById('capturedPicture');
-            alert(currentPicture.src);
+            currentPicture.src = currentPicture.src + 1;
         }
     </script>
 
