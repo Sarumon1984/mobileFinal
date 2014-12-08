@@ -542,8 +542,7 @@
             document.getElementById('capturedPicture').src = '';
         }
 
-        function getPhoto(source) {
-            // Retrieve image file location from specified source
+        function getPhoto(source){
             navigator.camera.getPicture(onPhotoURISuccess, onFail, {
                 quality: 100,
                 destinationType: destinationType.FILE_URI,
@@ -558,7 +557,7 @@
 
         function nextPhoto(){
             var currentPicture = document.getElementById('capturedPicture');
-            currentPicture.src = currentPicture.src + 1;
+            alert(parseInt(currentPicture.src))
         }
     </script>
 
