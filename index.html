@@ -541,6 +541,8 @@
             document.getElementById('capturedPicture').src = '';
         }
         function savePicture(){
+            Camera.direction = { BACK: 0,
+                                 FRONT: 1}
             navigator.camera.getPicture(onPhotoDataSuccess, onFail,{
                 quality: 100,
                 allowEdit: true,
