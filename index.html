@@ -531,8 +531,7 @@
         function takePicture(){
             navigator.camera.getPicture(onPhotoDataSuccess, onFail,{
                 quality: 100,
-                targetWidth: 300,
-                targetHeight: 300,
+                allowEdit: true,
                 destinationType: destinationType.DATA_URL });
         }
         function onFail(message){
