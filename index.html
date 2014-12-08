@@ -554,11 +554,11 @@
             var capturedPicture = document.getElementById('capturedPicture');
             capturedPicture.style.display = 'block';
             capturedPicture.src = imageURI;
-            alert(imageURI);
         }
 
-        function nextPhoto(){
-
+        function nextPhoto(imageURI){
+            var currentPicture = document.getElementById('capturedPicture');
+            alert(currentPicture);
         }
     </script>
 
